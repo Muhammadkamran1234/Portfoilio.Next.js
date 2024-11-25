@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Image from 'next/image'; // Import Image from Next.js
 
 const Hero = () => {
   return (
@@ -15,10 +16,12 @@ const Hero = () => {
       <div className="container grid lg:grid-cols-2 h-[calc(100vh-60px)]">
         {/* Profile Image in a larger circle */}
         <div className="flex justify-center items-center">
-          <img
+          <Image
             src="/profile.png" // Ensure the image path is correct
             alt="Profile"
-            className="rounded-full w-[300px] h-[300px] object-cover" // Increased size to 300px
+            width={300} // Set width for the image
+            height={300} // Set height for the image
+            className="rounded-full object-cover" // Increased size to 300px
           />
         </div>
         
